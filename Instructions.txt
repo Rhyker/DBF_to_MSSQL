@@ -1,0 +1,28 @@
+Instructions:
+
+How to update .dbf files used for importing:
+
+1. Access Vic Datamart (https://services.land.vic.gov.au/SpatialDatamart/)
+
+   An account is required to download datasets.
+
+2. Download these 3 datasets:
+    - Parcel Aspatial Table - Vicmap Property
+    - Parcel Property Aspatial Table - Vicmap Property
+    - Vicmap Address*
+
+   Use the following settings for each file:
+   Area: Whole of State : VIC (+4km)
+   Format: ESRI Shape file
+   Projection: _ Geographicals on GDA-2020
+
+   *Vicmap Address will be split into two files .dbf files: ADDRESS.dbf and ADDRESS_1.dbf, this is to avoid dataset file size limitations when
+   importing.
+
+3. Once all files are downloaded run the "Shape to SQL" program and use the "File" option, then select option "1". Navigate to the downloaded location
+   for the above files and select them all at once and run.
+
+   Any existing datasets with the same name will be overwritten in the "Shapefiles" folder.
+
+
+The new datasets can now be used using the import function to update SS_GUI.
